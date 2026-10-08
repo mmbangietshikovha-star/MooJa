@@ -1,89 +1,47 @@
-// MooJa Wear Website JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+
+    const yearElements = document.querySelectorAll(".year");
+
+    const currentYear = new Date().getFullYear();
+
+    for (let i = 0; i < yearElements.length; i++) {
+        yearElements[i].textContent = currentYear;
+    }
 
 
-// Get the current year
+    const contactForm = document.getElementById("contactForm");
 
-let yearElements = document.querySelectorAll(".year");
+    if (contactForm) {
 
-
-for (let i = 0; i < yearElements.length; i++) {
-
-    yearElements[i].textContent =
-        new Date().getFullYear();
-
-}
-
-
-
-// Contact form
-
-let contactForm =
-    document.getElementById("contact-form");
-
-
-if (contactForm) {
-
-    contactForm.addEventListener(
-        "submit",
-        function(event) {
+        contactForm.addEventListener("submit", function (event) {
 
             event.preventDefault();
 
-
-            let name =
-                document.getElementById("name").value;
-
-
-            let email =
-                document.getElementById("email").value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
 
 
-            let subject =
-                document.getElementById("subject").value;
+            const moojaEmail = "replace-with-mooja-email@example.com";
 
 
-            let message =
-                document.getElementById("message").value;
+            const mailSubject = encodeURIComponent(subject);
 
-
-
-            // CHANGE THIS TO THE REAL MOOJA EMAIL
-
-            let brandEmail =
-                "replace-with-mooja-email@example.com";
-
-
-
-            let emailSubject =
-                encodeURIComponent(
-                    "MooJa enquiry: " + subject
-                );
-
-
-            let emailBody =
-                encodeURIComponent(
-
-                    "Name: " + name + "\n" +
-
-                    "Customer email: " + email + "\n" +
-
-                    "Interested in: " + subject + "\n\n" +
-
-                    "Message:\n" + message
-
-                );
-
+            const mailBody = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
 
 
             window.location.href =
-                "mailto:" +
-                brandEmail +
-                "?subject=" +
-                emailSubject +
-                "&body=" +
-                emailBody;
+                "mailto:" + moojaEmail +
+                "?subject=" + mailSubject +
+                "&body=" + mailBody;
 
-        }
-    );
+        });
 
-}
+    }
+
+});
