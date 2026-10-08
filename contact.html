@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | MooJa Wear</title>
+
+    <title>Contact MooJa Wear</title>
+
     <link rel="stylesheet" href="mooja.css">
 </head>
 
@@ -31,138 +34,232 @@
     <section class="contact-hero">
 
         <div>
-            <p class="small-title">GET IN TOUCH</p>
+
+            <p class="small-title">
+                LET'S CONNECT
+            </p>
 
             <h1>
-                WANT TO<br>
-                ROCK MOOJA?
+                WANT TO OWN<br>
+                <span>MOOJA?</span>
             </h1>
 
             <p>
-                Contact us if you want to buy MooJa clothing,
-                ask about available styles or find out about
-                upcoming drops.
+                Want to buy a T-shirt or ask about the latest
+                drop? Get in touch with us and we'll help you
+                find out what's available.
             </p>
+
+            <br>
+
+            <a class="main-button" href="#contact-details">
+                FIND OUR CONTACTS ↓
+            </a>
+
         </div>
 
-        <img src="sale.jpeg" alt="MooJa T-shirt">
+
+        <div>
+            <img src="sale.jpeg" alt="MooJa streetwear">
+        </div>
 
     </section>
 
 
-    <section class="contact-section">
+
+    <section class="contact-section" id="contact-details">
 
         <div class="contact-info">
 
-            <p class="small-title">CONTACT MOOJA</p>
+            <p class="small-title">
+                SAY HELLO
+            </p>
 
             <h2>
-                LET'S TALK.
+                Contact <span>MooJa.</span>
             </h2>
 
             <p>
-                You can contact MooJa through any of the options below.
+                For orders, sizes, colours and new collection
+                updates, contact the brand through the details
+                below.
             </p>
 
 
             <div class="contact-item">
 
-                <h3>WhatsApp / Call</h3>
+                <h3>
+                    WhatsApp / Call
+                </h3>
 
                 <p>
-                    +27 XX XXX XXXX
+                    079 990 0900
                 </p>
+
+                <a class="text-button"
+                   href="https://wa.me/27799900900"
+                   target="_blank">
+
+                    Open WhatsApp →
+
+                </a>
 
             </div>
 
 
             <div class="contact-item">
 
-                <h3>Instagram</h3>
+                <h3>
+                    Instagram
+                </h3>
 
                 <p>
-                    @MooJaWear
+                    Follow MooJa for pictures and updates.
                 </p>
+
+                <a class="text-button"
+                   href="https://www.instagram.com/mooja_wear_?stkn=aTJlbXU3azFsdm40&utm_source=qr"
+                   target="_blank">
+
+                    Visit Instagram →
+
+                </a>
 
             </div>
 
 
             <div class="contact-item">
 
-                <h3>TikTok</h3>
+                <h3>
+                    TikTok
+                </h3>
 
                 <p>
-                    @MooJaWear
+                    Follow MooJa for new drops and brand content.
                 </p>
+
+                <a class="text-button"
+                   href="https://www.tiktok.com/@mooja_wear?_r=1&_t=ZS-9ANpGC6hH32"
+                   target="_blank">
+
+                    Visit TikTok →
+
+                </a>
 
             </div>
 
 
             <div class="contact-item">
 
-                <h3>Email</h3>
+                <h3>
+                    Email
+                </h3>
 
                 <p>
-                    replace-with-mooja-email@example.com
+                    Send MooJa an email for orders and enquiries.
                 </p>
+
+                <a class="text-button"
+                   href="mailto:Moojawear@gmail.com">
+
+                    Email MooJa →
+
+                </a>
 
             </div>
 
         </div>
 
 
+
         <div class="contact-form-container">
 
-            <h2>Send Us A Message</h2>
+            <h2>
+                How can we help?
+            </h2>
 
-            <form id="contactForm">
+            <p>
+                Fill in the form and your email app will open
+                with your message prepared.
+            </p>
 
-                <label for="name">Name</label>
+            <br>
+
+
+            <form id="contact-form">
+
+                <label for="name">
+                    Your name
+                </label>
 
                 <input
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Your name"
+                    placeholder="Enter your name"
                     required
                 >
 
 
-                <label for="email">Email</label>
+                <label for="email">
+                    Your email
+                </label>
 
                 <input
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Your email"
+                    placeholder="Enter your email"
                     required
                 >
 
 
-                <label for="subject">Subject</label>
+                <label for="subject">
+                    What are you interested in?
+                </label>
 
-                <input
-                    type="text"
+                <select
                     id="subject"
-                    name="subject"
-                    placeholder="What do you want to ask?"
-                    required
-                >
+                    name="subject">
+
+                    <option>
+                        Box-Fitted T-Shirt
+                    </option>
+
+                    <option>
+                        Baggy T-Shirt
+                    </option>
+
+                    <option>
+                        New collection
+                    </option>
+
+                    <option>
+                        General enquiry
+                    </option>
+
+                </select>
 
 
-                <label for="message">Message</label>
+                <label for="message">
+                    Your message
+                </label>
 
                 <textarea
                     id="message"
                     name="message"
-                    rows="6"
-                    placeholder="Write your message here..."
+                    rows="5"
+                    placeholder="Tell us what you would like to know..."
                     required
                 ></textarea>
 
 
-                <button type="submit" class="main-button">
-                    Send Message
+                <button
+                    class="main-button"
+                    type="submit">
+
+                    PREPARE EMAIL →
+
                 </button>
 
             </form>
@@ -171,23 +268,56 @@
 
     </section>
 
+
+
+    <section class="about-cta">
+
+        <h2>
+            Support local.
+            <span>Wear MooJa.</span>
+        </h2>
+
+        <p>
+            Thank you for supporting a growing brand from Venda.
+        </p>
+
+    </section>
+
 </main>
 
 
+
 <footer>
+
     <div class="footer-container">
 
         <div>
-            <h3>MooJa Wear</h3>
-            <p>The rising brand in Venda.</p>
+
+            <a class="logo" href="index.html">
+                <img src="logo.jpeg" alt="MooJa Wear Logo">
+            </a>
+
+            <p>
+                The Rising Brand in Venda
+            </p>
+
         </div>
 
+
         <div>
-            <p>© <span class="year"></span> MooJa Wear</p>
+
+            <p>
+                © <span class="year"></span>
+                MooJa Wear.
+                All rights reserved.
+            </p>
+
         </div>
 
     </div>
+
 </footer>
+
 
 
 <script src="Mooja.js"></script>

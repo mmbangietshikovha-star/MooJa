@@ -19,6 +19,7 @@ body {
     background: var(--black);
     color: var(--white);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 img {
@@ -604,10 +605,13 @@ footer {
     .logo img {
         width: 90px;
         height: 55px;
+        object-fit: contain;
     }
 
     nav {
         gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav a {
@@ -631,6 +635,16 @@ footer {
 
     .hero h1 {
         font-size: 45px;
+    }
+
+
+    /* FIX MOBILE HERO IMAGE */
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
     }
 
 
@@ -661,8 +675,14 @@ footer {
         font-size: 45px;
     }
 
+
+    /* FIX PAGE BANNER IMAGE */
+
     .page-banner img {
-        height: 400px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
     }
 
 
@@ -670,13 +690,24 @@ footer {
         font-size: 35px;
     }
 
+
+    /* FIX STORY IMAGE */
+
     .story-image img {
-        height: 400px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
     }
 
 
+    /* FIX STYLE IMAGES */
+
     .style-card img {
-        height: 400px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
     }
 
 
@@ -684,8 +715,14 @@ footer {
         font-size: 45px;
     }
 
+
+    /* FIX CONTACT IMAGE */
+
     .contact-hero img {
-        height: 400px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
     }
 
 
@@ -702,48 +739,84 @@ footer {
     }
 }
 
-/* COLLECTION */
 
-.collection {
-    width: 90%;
-    max-width: 1200px;
-    margin: 100px auto;
-}
+/* SMALL PHONES */
 
-.collection-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+@media (max-width: 480px) {
 
-.collection-card {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    overflow: hidden;
-}
+    .nav-container {
+        width: 94%;
+    }
 
-.collection-card img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-}
+    nav {
+        gap: 10px;
+    }
 
-.collection-info {
-    padding: 25px;
-}
+    nav a {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
 
-.collection-info span {
-    color: var(--red);
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
 
-.collection-info h3 {
-    font-size: 25px;
-    margin: 8px 0 12px;
-}
+    .hero h1,
+    .contact-hero h1,
+    .page-banner h1 {
+        font-size: 38px;
+    }
 
-.collection-info p {
-    color: var(--gray);
+
+    .hero {
+        width: 94%;
+        padding: 45px 0;
+    }
+
+
+    .news,
+    .styles-section,
+    .values,
+    .page-banner,
+    .story,
+    .contact-hero,
+    .contact-section {
+        width: 94%;
+    }
+
+
+    .section-title h2,
+    .story-text h2,
+    .contact-info h2,
+    .about-cta h2 {
+        font-size: 30px;
+    }
+
+
+    .drop-banner {
+        width: 94%;
+        padding: 35px 20px;
+    }
+
+    .drop-banner h2 {
+        font-size: 30px;
+    }
+
+
+    .contact-form-container {
+        padding: 20px;
+    }
+
+
+    /* KEEP MOBILE IMAGES FULL */
+
+    .hero-image img,
+    .page-banner img,
+    .story-image img,
+    .style-card img,
+    .contact-hero img,
+    .news-card img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
 }
